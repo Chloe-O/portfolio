@@ -160,6 +160,12 @@ h1 {
 /*Media queries   769px — 1024px*/
 
 @media (max-width: 1024px) {
+
+    body {
+        align-items: flex-start;
+        padding: 2em 0;
+    }
+
     main {
         flex-direction: column;
         gap: 3em;
@@ -174,10 +180,5 @@ h1 {
     .right {
         grid-template-columns: repeat(1, auto);
     }
-
-    .img-container {
-        width: 400px;
-        height: 400px;
-        background-size: cover;
-    }
+    
 }
