@@ -1,147 +1,174 @@
 body {
+    height: 100vh;
     margin: 0;
     padding: 0;
-    /* height: 100vh; */
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-    background-color: #eee7e1;
-    color: #1d1c1b;
-}
-
-.content-wrapper {
     display: flex;
     align-items: center;
-    padding: 5em;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #EFEDE7;
+    color: #463422;
+    font-weight: 300;
 }
 
-/*LEFT COLUMN*/
+/*Main container*/
 
-.left-col {
-    width: 50%;
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
 }
 
+/*Typography*/
 
-/*WRAPPER*/
+h1 {
+    font-weight: 300;
+    border-bottom: 1px dotted #161315;
+}
 
-.projects-wrapper {
-    margin: 0 auto;
-    padding: 3em;
+/*Columns*/
+
+/* .left, .right {
+
+} */
+
+.left {
+    max-width: 15%;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    justify-items: center;
+}
+
+.right {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 1em;
-    width: 50%
+    gap: 0.5em;
 }
 
-/*PROJECT ITEMS*/
+/*Images*/
 
-.project-item {
-    display: flex;
-    flex-direction: column;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-.content {
-    padding: 0.5em;
-}
-
-/*IMAGES*/
-
-img {
+.img-container img {
     width: 100%;
-    object-fit: cover;
 }
 
-/*TECH SPANS*/
-
-.tech {
-    background-color: pink;
-    padding: 0.1em 0.25em;
-    font-size: 0.75rem;
-    font-weight: bold;
-    border-radius: 3px;
+.img-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
 }
 
-/*LINKS*/
+.thumbnail-text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #EFEDE7;
+}
 
-.links {
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .overlay:hover {
+    opacity: 1; 
+  }
+
+  p.overlay {
+    margin: 0;
+}
+
+/*Overlay links*/
+
+.thumbnail-text a {
+    text-decoration: none;
+    color: #EFEDE7;
+    padding: 2px;
+}
+
+.thumbnail-text a:hover {
+    color: red;
+} 
+
+
+/*Bio*/
+
+.bio {
+    text-align: justify;
+}
+
+/*Social links*/
+
+.socials {
     display: flex;
     justify-content: center;
-    gap: 1em;
+    gap: 0.5em;
+}
+
+.socials a {
+    color: #463422;
     text-decoration: none;
+    font-weight: 300;
+
+}
+
+.socials a:hover {
+    color: #824839;
+    border-bottom: 1px dotted #D9785F;
+}
+
+/*Tech icons*/
+
+.tech-icons {
+    margin-top: 1em;
     text-align: center;
 }
 
-.links i {
-    font-size: 1.5rem;
-    color: red;
+.tech-icons div {
+    display: inline;
+    font-size: 2rem;
+    color: #824839;
 }
 
-.links i:hover {
-    color: rebeccapurple;
+/*Profile picture*/
+
+.profile-pic {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
 }
 
-/*FOOTER*/
+/*Media queries   769px — 1024px*/
 
-footer {
-    height: 5em;
-    background-color: #1d1c1b;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-
-.footer-flex {
-    display: flex;
-    text-decoration: none;
-}
-
-.footer-flex i {
-    font-size: 1.5rem;
-    color:#ffffff;
-}
-
-.footer-flex i:hover {
-    color: #D3CADE;
-}
-
-/*MEDIA QUERIES*/
-
-@media (max-width: 600px) {
-
-    .left-col {
-        width: 100%;
-    }
-    .content-wrapper {
-        width: 100%;
-        padding: 0.5em;
+@media (max-width: 1024px) {
+    main {
         flex-direction: column;
+        gap: 3em;
     }
 
-    .projects-wrapper {
+    .left {
+        max-width: 75%;
+    }
+}
+
+@media (max-width: 650px) {
+    .right {
         grid-template-columns: repeat(1, auto);
-        width: 100%;
     }
 
-    .project-item {
-        box-shadow: none;
+    .img-container {
+        width: 400px;
+        height: 400px;
+        background-size: cover;
     }
-
-}
-
-@media (min-width: 600px) and (max-width: 1000px) {
-
-    .content-wrapper {
-        width: 100%;
-        padding: 0.5em;
-        flex-direction: column;
-    }
-
-    .left-col {
-        width: 100%;
-    }
-
-    .projects-wrapper {
-        width: 90%;
-    }
-
 }
