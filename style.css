@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    background-color: #EFEDE7;
+    background-color: #f3f3f3;
     color: #463422;
     font-weight: 300;
 }
@@ -35,9 +35,6 @@ h1 {
 
 /*Columns*/
 
-/* .left, .right {
-
-} */
 
 .left {
     max-width: 15%;
