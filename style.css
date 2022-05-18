@@ -8,7 +8,7 @@ body {
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     background-color: #f3f3f3;
-    color: #463422;
+    color: #545454;
     font-weight: 300;
 }
 
@@ -83,7 +83,7 @@ h1 {
     width: 100%;
     opacity: 0;
     transition: .3s ease;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .overlay:hover {
