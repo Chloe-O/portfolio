@@ -53,13 +53,15 @@ h1 {
 
 .img-container img {
     width: 100%;
+    border-radius: 15px;
+    background-size: contain;
 }
 
 .img-container {
     position: relative;
     width: 300px;
     height: 300px;
-    background-size: cover;
+    
 }
 
 .thumbnail-text {
@@ -84,6 +86,7 @@ h1 {
     opacity: 0;
     transition: .3s ease;
     background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
   }
 
   .overlay:hover {
