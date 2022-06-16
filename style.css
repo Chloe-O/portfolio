@@ -1,183 +1,85 @@
 body {
-    height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f3f3f3;
-    color: #545454;
-    font-weight: 300;
+    color: #282862;
+    height: 100vh;
+    /*https://cssgradient.io/gradient-backgrounds*/
+    background: linear-gradient(130deg, #669bf7e8, #ffbbecf8);
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
 }
 
-/*Main container*/
-
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5em;
-}
-
-/*Typography*/
-
-h1 {
-    font-weight: 300;
-    border-bottom: 1px dotted #161315;
-}
-
-.small {
-    font-size: 0.8rem;
-    margin: 5px;
-}
-
-/*Columns*/
-
-
-.left {
-    max-width: 15%;
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-    justify-items: center;
-}
-
-.right {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 0.5em;
-}
-
-/*Images*/
-
-.img-container img {
-    width: 100%;
+.container {
+    background-color: #f7f7f7;
+    background: linear-gradient(130deg, #fff, #f7f7f7);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 15px;
-    background-size: contain;
 }
 
-.img-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    
+/*badges*/
+
+.badge {
+    background: #f8a3b1;
+    box-shadow: rgb(0 0 0 / 24%) -1px 1px 4px;
+    text-transform: uppercase;
 }
 
-.thumbnail-text {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #EFEDE7;
+/*images*/
+
+.project-thumbnail {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.overlay {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .3s ease;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-  }
+/*typography*/
 
-  .overlay:hover {
-    opacity: 1; 
-  }
-
-  p.overlay {
+.title {
+    font-size: 4rem;
+    font-weight: 700;
     margin: 0;
 }
 
-/*Overlay links*/
+.sub-title {
+    font-size: 3rem;
+    margin: 0;
+}
 
-.thumbnail-text a {
+.underline {
+    border-bottom: 3px dotted #f8a3b1;
+}
+
+.links {
+    font-size: 0.8rem;
+    color:#282862;
+    font-weight: 700;
     text-decoration: none;
-    color: #EFEDE7;
-    padding: 2px;
+    border-bottom: 2px dotted #282862;
 }
 
-.thumbnail-text a:hover {
-    color: #824839;
-} 
-
-
-/*Bio*/
-
-.bio {
-    text-align: justify;
+.links:hover {
+    color: #f8a3b1;
+    border-bottom: 2px dotted #f8a3b1;
 }
 
-/*Social links*/
-
-.socials {
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
+.project-title {
+    font-weight: 700;
 }
 
-.socials a {
-    color: #463422;
-    text-decoration: none;
-    font-weight: 300;
-
+.footer {
+    font-weight: 700;
+    opacity: 0.5;
+    font-size: 0.7rem;
 }
 
-.socials a:hover {
-    color: #824839;
-    border-bottom: 1px dotted #D9785F;
-}
+/*media queries*/
 
-/*Tech icons*/
-
-.tech-icons {
-    margin-top: 1em;
-    text-align: center;
-}
-
-.tech-icons div {
-    display: inline;
-    font-size: 2rem;
-}
-
-/*Profile picture*/
-
-.profile-pic {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-}
-
-/*Media queries   769px — 1024px*/
-
-@media (max-width: 1024px) {
-
+@media (min-width: 992px) { 
     body {
-        align-items: flex-start;
-        padding: 2em 0;
+        display:flex;
+        justify-content: center;
+       align-items: center;
     }
-
-    main {
-        flex-direction: column;
-        gap: 3em;
-    }
-
-    .left {
-        max-width: 75%;
-    }
-}
-
-@media (max-width: 650px) {
-    .right {
-        grid-template-columns: repeat(1, auto);
-    }
-    
-}
+ }
