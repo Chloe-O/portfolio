@@ -1,85 +1,22 @@
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+height: 100%;
+}
+
+body {
     color: #282862;
-    height: 100vh;
+    height: 100%;
     /*https://cssgradient.io/gradient-backgrounds*/
-    background: linear-gradient(130deg, #669bf7e8, #ffbbecf8);
+    background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(61,9,121,1) 100%);
     font-family: 'Lato', sans-serif;
     font-size: 0.9rem;
 }
 
-.container {
-    background-color: #f7f7f7;
-    background: linear-gradient(130deg, #fff, #f7f7f7);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 15px;
+#container {
+padding: 100px;
 }
-
-/*badges*/
-
-.badge {
-    background: #f8a3b1;
-    box-shadow: rgb(0 0 0 / 24%) -1px 1px 4px;
-    text-transform: uppercase;
-}
-
-/*images*/
-
-.project-thumbnail {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-/*typography*/
-
-.title {
-    font-size: 4rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.sub-title {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.underline {
-    border-bottom: 3px dotted #f8a3b1;
-}
-
-.links {
-    font-size: 0.8rem;
-    color:#282862;
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 2px dotted #282862;
-}
-
-.links:hover {
-    color: #f8a3b1;
-    border-bottom: 2px dotted #f8a3b1;
-}
-
-.project-title {
-    font-weight: 700;
-}
-
-.footer {
-    font-weight: 700;
-    opacity: 0.5;
-    font-size: 0.7rem;
-}
-
-/*media queries*/
-
-@media (min-width: 992px) { 
-    body {
-        display:flex;
-        justify-content: center;
-       align-items: center;
-    }
- }
